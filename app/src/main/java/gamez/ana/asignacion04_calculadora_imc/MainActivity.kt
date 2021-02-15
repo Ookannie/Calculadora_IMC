@@ -34,10 +34,36 @@ class MainActivity : AppCompatActivity() {
             imc.visibility = View.VISIBLE
             imc.setText(valorIMC.toString())
 
+            setRango(valorIMC, range)
+
         }
     }
 
     //funciones
+    fun setRango(imc : Double, view : TextView){
+      if (imc < 18.5){
+          view.setText("Bajo Peso")
+          view.setBackgroundResource(R.color.colorYellow)
+      }else if(imc in 18.5 .. 24.9){
+          view.setText("Normal")
+          view.setBackgroundResource(R.color.colorGreen)
+      }else if (imc in 25.0 .. 29.9){
+          view.setText("Sobrepeso")
+          view.setBackgroundResource(R.color.colorOrange)
+      }else if(imc in 30.0 .. 34.9){
+          view.setText("Obesidad grado 1")
+          view.setBackgroundResource(R.color.colorOrange)
+      }else if (imc in 35.0 .. 39.9){
+          view.setText("Obesidad grado 2")
+          view.setBackgroundResource(R.color.colorBrown)
+      }else if (imc >= 40.0){
+          view.setText("Obesidad grado 3")
+          view.setBackgroundResource(R.color.colorRed)
+      }
+
+
+        view.visibility = View.VISIBLE
+    }
 
 
 }
