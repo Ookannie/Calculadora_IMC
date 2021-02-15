@@ -26,8 +26,8 @@ class MainActivity : AppCompatActivity() {
         //evento de botones
 
         btnCalcular.setOnClickListener {
-            pesoTemp = peso.toString().toDouble()
-            estaturaTemp = estatura.toString().toDouble()
+            pesoTemp = peso.text.toString().toDouble()
+            estaturaTemp = estatura.text.toString().toDouble()
 
             valorIMC = ((pesoTemp) / (Math.pow(estaturaTemp, 2.0)))
 
