@@ -25,6 +25,15 @@ class MainActivity : AppCompatActivity() {
 
         //evento de botones
 
+
+        peso.setOnClickListener() {
+            peso.setText("")
+        }
+
+        estatura.setOnClickListener() {
+            estatura.setText("")
+        }
+
         btnCalcular.setOnClickListener {
             pesoTemp = peso.text.toString().toDouble()
             estaturaTemp = estatura.text.toString().toDouble()
